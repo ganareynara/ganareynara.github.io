@@ -95,16 +95,16 @@
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<embed src="https://music.youtube.com/watch?v=v9Km-R7uUQo&list=RDCLAK5uy_kIlyUNKFS6Z7rgWOhrPzqohetabYwby08" allow="autoplay" style="display:none" id="iframeAudio">
-							
+							<!--<iframe src="song/song.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+							</iframe>-->
 							<!--<audio autoplay loop  id="playAudio" type="audio/mpeg">
 								<source src="song/song.mp3">
 							</audio> -->
-							<!--<audio hidden loop>
+							<audio controls loop autoplay>
 								<source src="song/song.mp3" type="audio/mpeg">
 								Browsermu tidak mendukung tag audio
-							</audio>-->
-							<h1>Olivia &amp; Andhika</h1>
+							</audio>
+							<h1 onload="audio()">Olivia &amp; Andhika</h1>
 							<h2>We Are Getting Married</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
 							<p>
@@ -419,7 +419,7 @@
 	<script src="js/main.js"></script>
 	  
 	<script>
-
+	
     // default example
     simplyCountdown('.simply-countdown-one', {
         year: 2022,
