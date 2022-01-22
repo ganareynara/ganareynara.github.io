@@ -103,7 +103,7 @@
 							<h1>Olivia &amp; Andhika</h1>
 							<h2>We Are Getting Married</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
-							<audio controls loop autoplay>
+							<audio controls loop autoplay id="audioz">
 								<source src="song/song.mp3" type="audio/mpeg">
 								Browsermu tidak mendukung tag audio
 							</audio>
@@ -419,6 +419,11 @@
 	<script src="js/main.js"></script>
 	  
 	<script>
+
+	var vid = document.getElementById("audioz");
+	vid.autoplay = true;
+	vid.load();
+
 	
     // default example
     simplyCountdown('.simply-countdown-one', {
