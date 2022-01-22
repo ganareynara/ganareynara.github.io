@@ -95,15 +95,15 @@
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<iframe src="song/song.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-							</iframe>
+							<!--<iframe src="song/song.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+							</iframe>-->
 							<!--<audio autoplay loop  id="playAudio" type="audio/mpeg">
 								<source src="song/song.mp3">
 							</audio> -->
 							<h1>Olivia &amp; Andhika</h1>
 							<h2>We Are Getting Married</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
-							<audio controls loop autoplay id="playAudio">
+							<audio controls loop autoplay id="audioz">
 								<source src="song/song.mp3" type="audio/mpeg">
 								Browsermu tidak mendukung tag audio
 							</audio>
@@ -420,16 +420,10 @@
 	  
 	<script>
 
-	window.onload = function() {
-		var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-			if(!isChrome){
-			$('#iframeAudio').remove()
-			}
-		else{
-			$('#playAudio').remove() //just to make sure that it will not have 2x audio in the background 
-		}
-
-	  }
+	$(window).on('load', function() {
+		var vid = document.getElementById("audioz");
+		vid.play();
+	})
 
 	
     // default example
