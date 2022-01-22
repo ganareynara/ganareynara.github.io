@@ -95,10 +95,14 @@
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<iframe src="song/song.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-							</iframe> 
-							<audio autoplay loop  id="playAudio" type="audio/mpeg">
+							<!--<iframe src="song/song.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+							</iframe>--> 
+							<!--<audio autoplay loop  id="playAudio" type="audio/mpeg">
 								<source src="song/song.mp3">
+							</audio>-->
+							<audio hidden autoplay loop>
+								<source src="song/song.mp3" type="audio/mpeg">
+								Browsermu tidak mendukung tag audio
 							</audio>
 							<h1>Olivia &amp; Andhika</h1>
 							<h2>We Are Getting Married</h2>
@@ -324,11 +328,14 @@
 								<div class="item">
 									<div class="testimony-slide active text-center">
 										<figure>
-											<img src="images/couple-1.jpg" alt="user">
+											<img src="images/wish/3.jpg" alt="user">
 										</figure>
-										<span><a style="color: black;">Gana Aditya</a></span>
+										<span><a style="color: black;">Shinta, Mitha, Merry, Hanon</a></span>
 										<blockquote>
-											<p style="color: black;">"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics"</p>
+											<p style="color: black;">"Hi Oliv & Dika.
+												The long awaited day has finally arrived. yes your wedding day.
+												We are also happy and can only wish the best for both of you.
+												I hope you guys can become a couple who mature, muffle and love each other until the end.."</p>
 										</blockquote>
 									</div>
 								</div>
@@ -412,16 +419,6 @@
 	<script src="js/main.js"></script>
 	  
 	<script>
-		
-	window.onload = function(){
-		var myAudio = document.getElementById('playAudio');
-		
-		if (myAudio.canPlayType('audio/mpeg')) {
-			myAudio.setAttribute('src','song/song.mp3');
-		}
-
-		myAudio.play();
-	}
 
     // default example
     simplyCountdown('.simply-countdown-one', {
