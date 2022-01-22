@@ -95,9 +95,9 @@
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<iframe src="song/song.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-							</iframe> 
-							<audio autoplay loop  id="playAudio">
+							<!--<iframe src="song/song.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+							</iframe> --> 
+							<audio autoplay loop  id="playAudio" type="audio/mpeg">
 								<source src="song/song.mp3">
 							</audio>
 							<h1>Olivia &amp; Andhika</h1>
@@ -413,6 +413,16 @@
 	  
 	<script>
 
+	window.onload = function(){
+		var myAudio = document.getElementById('playAudio');
+		
+		if (myAudio.canPlayType('audio/mpeg')) {
+			myAudio.setAttribute('src','song/song.mp3');
+		}
+
+		myAudio.play();
+	}
+
     // default example
     simplyCountdown('.simply-countdown-one', {
         year: 2022,
@@ -438,7 +448,7 @@
 		}
 
 	  }
-</script>
+	</script>
 
 	</body>
 </html>
